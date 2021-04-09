@@ -61,11 +61,11 @@ public class NettyReactiveStreamsBody implements NettyBody {
       future.setStreamConsumed(true);
       NettySubscriber subscriber = new NettySubscriber(channel, future, contentLength != 0);
 
-      channel.eventLoop.execute(() -> {
+      channel.eventLoop().execute(() -> {
         channel.pipeline().addLast(NAME_IN_CHANNEL_PIPELINE, subscriber);
         publisher.subscribe(new SubscriberAdapter(subscriber));
       });
-        subscriber.delayedStart();
+      subscriber.delayedStart();
     }
   }
 
