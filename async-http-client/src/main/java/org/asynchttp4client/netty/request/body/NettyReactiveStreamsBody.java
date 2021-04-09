@@ -59,7 +59,7 @@ public class NettyReactiveStreamsBody implements NettyBody {
       LOGGER.warn("Stream has already been consumed and cannot be reset");
     } else {
       future.setStreamConsumed(true);
-      NettySubscriber subscriber = new NettySubscriber(channel, future);
+      NettySubscriber subscriber = new NettySubscriber(channel, future, contentLength != 0);
       channel.pipeline().addLast(NAME_IN_CHANNEL_PIPELINE, subscriber);
       publisher.subscribe(new SubscriberAdapter(subscriber));
       subscriber.delayedStart();
@@ -105,12 +105,14 @@ public class NettyReactiveStreamsBody implements NettyBody {
 
     private final Channel channel;
     private final NettyResponseFuture<?> future;
+    private final boolean needsLastHttpContent;
     private AtomicReference<Subscription> deferredSubscription = new AtomicReference<>();
 
-    NettySubscriber(Channel channel, NettyResponseFuture<?> future) {
+    NettySubscriber(Channel channel, NettyResponseFuture<?> future, boolean needsLastHttpContent) {
       super(channel.eventLoop());
       this.channel = channel;
       this.future = future;
+      this.needsLastHttpContent = needsLastHttpContent;
     }
 
     @Override
@@ -118,13 +120,15 @@ public class NettyReactiveStreamsBody implements NettyBody {
       if (channel.isActive()) {
         //Always remove, as we are no longer caring about this subscriber
         removeFromPipeline();
-        if (channel.eventLoop().inEventLoop()) {
-          channel.writeAndFlush(LastHttpContent.EMPTY_LAST_CONTENT);
-        } else {
-          channel.eventLoop().execute(() -> channel.writeAndFlush(LastHttpContent.EMPTY_LAST_CONTENT));
+        if (needsLastHttpContent) {
+          if (channel.eventLoop().inEventLoop()) {
+            channel.writeAndFlush(LastHttpContent.EMPTY_LAST_CONTENT);
+          } else {
+            channel.eventLoop().execute(() -> channel.writeAndFlush(LastHttpContent.EMPTY_LAST_CONTENT));
+          }
         }
-      }    
-    }
+      }
+    }    
 
     @Override
     public void onSubscribe(Subscription subscription) {
