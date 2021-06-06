@@ -165,7 +165,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/jetty-client/src/main/scala/org/http4s/jetty/client/JettyClient.scala" target="_blank">JettyClient.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/jetty-client/src/main/scala/org/http4s/jetty/client/JettyClient.scala" target="_blank">JettyClient.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -271,9 +271,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.http4s.jetty.client.JettyClient#allocate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="allocate[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.ConcurrentEffect[F]):F[(org.http4s.client.Client[F],F[Unit])]"></a><a id="allocate[F[_]](HttpClient)(ConcurrentEffect[F]):F[(Client[F],F[Unit])]"></a>
+      <a id="allocate[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.Async[F]):F[(org.http4s.client.Client[F],F[Unit])]"></a><a id="allocate[F[_]](HttpClient)(Async[F]):F[(Client[F],F[Unit])]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#allocate[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.ConcurrentEffect[F]):F[(org.http4s.client.Client[F],F[Unit])]" title="Permalink">
+      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#allocate[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.Async[F]):F[(org.http4s.client.Client[F],F[Unit])]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -282,7 +282,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">allocate</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="client">client: <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/client/HttpClient.html#org.eclipse.jetty.client.HttpClient" class="extype" name="org.eclipse.jetty.client.HttpClient">HttpClient</a> = <span class="symbol"><span class="name"><a href="#defaultHttpClient():org.eclipse.jetty.client.HttpClient">defaultHttpClient()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/ConcurrentEffect.html#cats.effect.ConcurrentEffect" class="extype" name="cats.effect.ConcurrentEffect">ConcurrentEffect</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.allocate.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="org.http4s.jetty.client.JettyClient.allocate.F">F</span>[(<a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.allocate.F">F</span>], <span class="extype" name="org.http4s.jetty.client.JettyClient.allocate.F">F</span>[<a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>])]</span>
+        <span class="name">allocate</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="client">client: <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/client/HttpClient.html#org.eclipse.jetty.client.HttpClient" class="extype" name="org.eclipse.jetty.client.HttpClient">HttpClient</a> = <span class="symbol"><span class="name"><a href="#defaultHttpClient():org.eclipse.jetty.client.HttpClient">defaultHttpClient()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <span class="extype" name="cats.effect.Async">Async</span>[<span class="extype" name="org.http4s.jetty.client.JettyClient.allocate.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="org.http4s.jetty.client.JettyClient.allocate.F">F</span>[(<a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.allocate.F">F</span>], <span class="extype" name="org.http4s.jetty.client.JettyClient.allocate.F">F</span>[<a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>])]</span>
       </span>
       
       
@@ -324,6 +324,8 @@
     </span>)</span>
               
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.jetty.client.JettyClient#defaultHttpClient" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -374,28 +376,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -413,6 +393,8 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -432,6 +414,8 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -484,6 +468,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -503,11 +489,13 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="org.http4s.jetty.client.JettyClient#resource" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="resource[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.ConcurrentEffect[F]):cats.effect.Resource[F,org.http4s.client.Client[F]]"></a><a id="resource[F[_]](HttpClient)(ConcurrentEffect[F]):Resource[F,Client[F]]"></a>
+      <a id="resource[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.Async[F]):cats.effect.Resource[F,org.http4s.client.Client[F]]"></a><a id="resource[F[_]](HttpClient)(Async[F]):Resource[F,Client[F]]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#resource[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.ConcurrentEffect[F]):cats.effect.Resource[F,org.http4s.client.Client[F]]" title="Permalink">
+      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#resource[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.Async[F]):cats.effect.Resource[F,org.http4s.client.Client[F]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -516,14 +504,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resource</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="client">client: <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/client/HttpClient.html#org.eclipse.jetty.client.HttpClient" class="extype" name="org.eclipse.jetty.client.HttpClient">HttpClient</a> = <span class="symbol"><span class="name"><a href="#defaultHttpClient():org.eclipse.jetty.client.HttpClient">defaultHttpClient()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/ConcurrentEffect.html#cats.effect.ConcurrentEffect" class="extype" name="cats.effect.ConcurrentEffect">ConcurrentEffect</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.resource.F">F</span>]</span>)</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html#cats.effect.Resource" class="extype" name="cats.effect.Resource">Resource</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.resource.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.resource.F">F</span>]]</span>
+        <span class="name">resource</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="client">client: <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/client/HttpClient.html#org.eclipse.jetty.client.HttpClient" class="extype" name="org.eclipse.jetty.client.HttpClient">HttpClient</a> = <span class="symbol"><span class="name"><a href="#defaultHttpClient():org.eclipse.jetty.client.HttpClient">defaultHttpClient()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <span class="extype" name="cats.effect.Async">Async</span>[<span class="extype" name="org.http4s.jetty.client.JettyClient.resource.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.Resource">Resource</span>[<span class="extype" name="org.http4s.jetty.client.JettyClient.resource.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.resource.F">F</span>]]</span>
       </span>
       
       
     </li><li name="org.http4s.jetty.client.JettyClient#stream" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="stream[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.ConcurrentEffect[F]):fs2.Stream[F,org.http4s.client.Client[F]]"></a><a id="stream[F[_]](HttpClient)(ConcurrentEffect[F]):Stream[F,Client[F]]"></a>
+      <a id="stream[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.Async[F]):fs2.Stream[F,org.http4s.client.Client[F]]"></a><a id="stream[F[_]](HttpClient)(Async[F]):Stream[F,Client[F]]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#stream[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.ConcurrentEffect[F]):fs2.Stream[F,org.http4s.client.Client[F]]" title="Permalink">
+      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#stream[F[_]](client:org.eclipse.jetty.client.HttpClient)(implicitF:cats.effect.Async[F]):fs2.Stream[F,org.http4s.client.Client[F]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -532,7 +520,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stream</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="client">client: <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/client/HttpClient.html#org.eclipse.jetty.client.HttpClient" class="extype" name="org.eclipse.jetty.client.HttpClient">HttpClient</a> = <span class="symbol"><span class="name"><a href="#defaultHttpClient():org.eclipse.jetty.client.HttpClient">defaultHttpClient()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/ConcurrentEffect.html#cats.effect.ConcurrentEffect" class="extype" name="cats.effect.ConcurrentEffect">ConcurrentEffect</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.stream.F">F</span>]</span>)</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.stream.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.stream.F">F</span>]]</span>
+        <span class="name">stream</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="client">client: <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/client/HttpClient.html#org.eclipse.jetty.client.HttpClient" class="extype" name="org.eclipse.jetty.client.HttpClient">HttpClient</a> = <span class="symbol"><span class="name"><a href="#defaultHttpClient():org.eclipse.jetty.client.HttpClient">defaultHttpClient()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <span class="extype" name="cats.effect.Async">Async</span>[<span class="extype" name="org.http4s.jetty.client.JettyClient.stream.F">F</span>]</span>)</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.stream.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.jetty.client.JettyClient.stream.F">F</span>]]</span>
       </span>
       
       
@@ -568,28 +556,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
@@ -636,13 +602,62 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li>
               </ol>
             </div>
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/jetty/client/JettyClient$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

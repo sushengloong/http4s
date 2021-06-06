@@ -169,7 +169,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/jetty-server/src/main/scala/org/http4s/jetty/server/JettyThreadPools.scala" target="_blank">JettyThreadPools.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/jetty-server/src/main/scala/org/http4s/jetty/server/JettyThreadPools.scala" target="_blank">JettyThreadPools.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -313,6 +313,8 @@
               
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="org.http4s.jetty.server.JettyThreadPools#default" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="default[F[_]](implicitF:cats.effect.Async[F]):cats.effect.Resource[F,org.eclipse.jetty.util.thread.ThreadPool]"></a><a id="default[F[_]](Async[F]):Resource[F,ThreadPool]"></a>
@@ -326,7 +328,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">default</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/Async.html#cats.effect.Async" class="extype" name="cats.effect.Async">Async</a>[<span class="extype" name="org.http4s.jetty.server.JettyThreadPools.default.F">F</span>]</span>)</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html#cats.effect.Resource" class="extype" name="cats.effect.Resource">Resource</a>[<span class="extype" name="org.http4s.jetty.server.JettyThreadPools.default.F">F</span>, <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html#org.eclipse.jetty.util.thread.ThreadPool" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">ThreadPool</a>]</span>
+        <span class="name">default</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <span class="extype" name="cats.effect.Async">Async</span>[<span class="extype" name="org.http4s.jetty.server.JettyThreadPools.default.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.Resource">Resource</span>[<span class="extype" name="org.http4s.jetty.server.JettyThreadPools.default.F">F</span>, <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html#org.eclipse.jetty.util.thread.ThreadPool" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">ThreadPool</a>]</span>
       </span>
       
       <p class="shortcomment cmt">The default <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">org.eclipse.jetty.util.thread.ThreadPool</a> used by
@@ -368,28 +370,6 @@ provided by Jetty.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/jetty/server/JettyThreadPools$.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -407,6 +387,8 @@ provided by Jetty.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -426,6 +408,8 @@ provided by Jetty.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -478,6 +462,8 @@ provided by Jetty.
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -497,6 +483,8 @@ provided by Jetty.
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="org.http4s.jetty.server.JettyThreadPools#resource" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="resource[F[_]](value:F[org.eclipse.jetty.util.thread.ThreadPool])(implicitF:cats.effect.Async[F]):cats.effect.Resource[F,org.eclipse.jetty.util.thread.ThreadPool]"></a><a id="resource[F[_]](F[ThreadPool])(Async[F]):Resource[F,ThreadPool]"></a>
@@ -510,7 +498,7 @@ provided by Jetty.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resource</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="value">value: <span class="extype" name="org.http4s.jetty.server.JettyThreadPools.resource.F">F</span>[<a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html#org.eclipse.jetty.util.thread.ThreadPool" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">ThreadPool</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/Async.html#cats.effect.Async" class="extype" name="cats.effect.Async">Async</a>[<span class="extype" name="org.http4s.jetty.server.JettyThreadPools.resource.F">F</span>]</span>)</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html#cats.effect.Resource" class="extype" name="cats.effect.Resource">Resource</a>[<span class="extype" name="org.http4s.jetty.server.JettyThreadPools.resource.F">F</span>, <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html#org.eclipse.jetty.util.thread.ThreadPool" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">ThreadPool</a>]</span>
+        <span class="name">resource</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="value">value: <span class="extype" name="org.http4s.jetty.server.JettyThreadPools.resource.F">F</span>[<a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html#org.eclipse.jetty.util.thread.ThreadPool" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">ThreadPool</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <span class="extype" name="cats.effect.Async">Async</span>[<span class="extype" name="org.http4s.jetty.server.JettyThreadPools.resource.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.Resource">Resource</span>[<span class="extype" name="org.http4s.jetty.server.JettyThreadPools.resource.F">F</span>, <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html#org.eclipse.jetty.util.thread.ThreadPool" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">ThreadPool</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Create a resource for a Jetty
@@ -522,7 +510,7 @@ does not implement any of the standard JVM or Jetty lifecycle systems,
 e.g. <span class="extype" name="java.lang.Closeable">java.lang.Closeable</span> or
 <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/component/LifeCycle.html" class="extype" name="org.eclipse.jetty.util.component.LifeCycle">org.eclipse.jetty.util.component.LifeCycle</a>, but <i>all</i> the concrete
 implementations of it provided by Jetty <i>do</i> implement
-<a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/component/LifeCycle.html" class="extype" name="org.eclipse.jetty.util.component.LifeCycle">org.eclipse.jetty.util.component.LifeCycle</a>.</p><p>The <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html" class="extype" name="cats.effect.Resource">cats.effect.Resource</a> implemented here will use the
+<a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/component/LifeCycle.html" class="extype" name="org.eclipse.jetty.util.component.LifeCycle">org.eclipse.jetty.util.component.LifeCycle</a>.</p><p>The <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/index.html#Resource[F[_],+A]=cats.effect.kernel.Resource[F,A]" class="extype" name="cats.effect">cats.effect.Resource</a> implemented here will use the
 <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/component/LifeCycle.html" class="extype" name="org.eclipse.jetty.util.component.LifeCycle">org.eclipse.jetty.util.component.LifeCycle</a> shutdown semantics if the
 underlying <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">org.eclipse.jetty.util.thread.ThreadPool</a> implements that
 interface. Otherwise it will invoke
@@ -532,7 +520,7 @@ startup a no-op.
       <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/thread/ThreadPool.html" class="extype" name="org.eclipse.jetty.util.thread.ThreadPool">org.eclipse.jetty.util.thread.ThreadPool</a> provided to this
       function <i>has not been started</i>. If it has and it implements
       <a href="https://www.eclipse.org/jetty/javadoc/jetty-9/org/eclipse/jetty/util/component/LifeCycle.html" class="extype" name="org.eclipse.jetty.util.component.LifeCycle">org.eclipse.jetty.util.component.LifeCycle</a>, then the creation
-      of the <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html" class="extype" name="cats.effect.Resource">cats.effect.Resource</a> will fail.</p></span></dd></dl></div>
+      of the <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/index.html#Resource[F[_],+A]=cats.effect.kernel.Resource[F,A]" class="extype" name="cats.effect">cats.effect.Resource</a> will fail.</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -565,28 +553,6 @@ startup a no-op.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/jetty/server/JettyThreadPools$.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
@@ -633,13 +599,62 @@ startup a no-op.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/jetty/server/JettyThreadPools$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li>
               </ol>
             </div>
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/jetty/server/JettyThreadPools$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

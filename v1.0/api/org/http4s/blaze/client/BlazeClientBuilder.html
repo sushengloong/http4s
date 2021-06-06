@@ -142,14 +142,6 @@
                         <a class="class" href="" title=""></a>
                         <a href="" title="">BlazeClientBuilder</a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="BlazeClientConfig$.html" title=""></a>
-                        <a class="class" href="BlazeClientConfig.html" title="Config object for the blaze clients"></a>
-                        <a href="BlazeClientConfig.html" title="Config object for the blaze clients">BlazeClientConfig</a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="Http1Client$.html" title="Create a HTTP1 client which will attempt to recycle connections"></a>
-                        <a href="Http1Client$.html" title="Create a HTTP1 client which will attempt to recycle connections">Http1Client</a>
-                      </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="NoConnectionAllowedException.html" title=""></a>
                         <a href="NoConnectionAllowedException.html" title="">NoConnectionAllowedException</a>
@@ -191,7 +183,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/blaze-client/src/main/scala/org/http4s/blaze/client/BlazeClientBuilder.scala" target="_blank">BlazeClientBuilder.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/blaze-client/src/main/scala/org/http4s/blaze/client/BlazeClientBuilder.scala" target="_blank">BlazeClientBuilder.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -316,9 +308,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.http4s.blaze.client.BlazeClientBuilder#F" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="F:cats.effect.ConcurrentEffect[F]"></a><a id="F:ConcurrentEffect[F]"></a>
+      <a id="F:cats.effect.kernel.Async[F]"></a><a id="F:Async[F]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#F:cats.effect.ConcurrentEffect[F]" title="Permalink">
+      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#F:cats.effect.kernel.Async[F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -327,7 +319,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">F</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/ConcurrentEffect.html#cats.effect.ConcurrentEffect" class="extype" name="cats.effect.ConcurrentEffect">ConcurrentEffect</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>]</span>
+        <span class="name">F</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Async.html#cats.effect.kernel.Async" class="extype" name="cats.effect.kernel.Async">Async</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="org.http4s.blaze.client.BlazeClientBuilder">BlazeClientBuilder</a> → BackendBuilder</dd></dl></div>
@@ -350,11 +342,11 @@
 release it.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an effect that allocates a backend and an <code>F[Unit]</code> to
 release it.  The returned <code>F</code> waits until the backend is ready
 to process requests.  The second element of the tuple shuts
-down the backend when run.</p><p>Unlike <a href="#resource:cats.effect.Resource[F,org.http4s.client.Client[F]]" class="extmbr" name="org.http4s.blaze.client.BlazeClientBuilder#resource">resource</a> and <a href="#stream:fs2.Stream[F,A]" class="extmbr" name="org.http4s.blaze.client.BlazeClientBuilder#stream">stream</a>, there is no automatic
+down the backend when run.</p><p>Unlike <a href="#resource:cats.effect.kernel.Resource[F,org.http4s.client.Client[F]]" class="extmbr" name="org.http4s.blaze.client.BlazeClientBuilder#resource">resource</a> and <a href="#stream:fs2.Stream[F,A]" class="extmbr" name="org.http4s.blaze.client.BlazeClientBuilder#stream">stream</a>, there is no automatic
 release of the backend.  This function is intended for REPL
 sessions, tests, and other situations where composing a
-<a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html" class="extype" name="cats.effect.Resource">cats.effect.Resource</a> or <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/Stream.html" class="extype" name="fs2.Stream">fs2.Stream</a> is not tenable.
-<a href="#resource:cats.effect.Resource[F,org.http4s.client.Client[F]]" class="extmbr" name="org.http4s.blaze.client.BlazeClientBuilder#resource">resource</a> or <a href="#stream:fs2.Stream[F,A]" class="extmbr" name="org.http4s.blaze.client.BlazeClientBuilder#stream">stream</a> is recommended wherever possible.
+<a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/index.html#Resource[F[_],+A]=cats.effect.kernel.Resource[F,A]" class="extype" name="cats.effect">cats.effect.Resource</a> or <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/Stream.html" class="extype" name="fs2.Stream">fs2.Stream</a> is not tenable.
+<a href="#resource:cats.effect.kernel.Resource[F,org.http4s.client.Client[F]]" class="extmbr" name="org.http4s.blaze.client.BlazeClientBuilder#resource">resource</a> or <a href="#stream:fs2.Stream[F,A]" class="extmbr" name="org.http4s.blaze.client.BlazeClientBuilder#stream">stream</a> is recommended wherever possible.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendBuilder</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -491,6 +483,8 @@ sessions, tests, and other situations where composing a
               
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="org.http4s.blaze.client.BlazeClientBuilder#connectTimeout" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="connectTimeout:scala.concurrent.duration.Duration"></a><a id="connectTimeout:Duration"></a>
@@ -572,28 +566,6 @@ sessions, tests, and other situations where composing a
       </span>
       
       
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -611,6 +583,8 @@ sessions, tests, and other situations where composing a
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -630,6 +604,8 @@ sessions, tests, and other situations where composing a
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.blaze.client.BlazeClientBuilder#idleTimeout" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -810,6 +786,8 @@ sessions, tests, and other situations where composing a
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -828,6 +806,8 @@ sessions, tests, and other situations where composing a
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.blaze.client.BlazeClientBuilder#parserMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -863,9 +843,9 @@ sessions, tests, and other situations where composing a
       
       
     </li><li name="org.http4s.blaze.client.BlazeClientBuilder#resource" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resource:cats.effect.Resource[F,org.http4s.client.Client[F]]"></a><a id="resource:Resource[F,Client[F]]"></a>
+      <a id="resource:cats.effect.kernel.Resource[F,org.http4s.client.Client[F]]"></a><a id="resource:Resource[F,Client[F]]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#resource:cats.effect.Resource[F,org.http4s.client.Client[F]]" title="Permalink">
+      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#resource:cats.effect.kernel.Resource[F,org.http4s.client.Client[F]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -874,7 +854,7 @@ sessions, tests, and other situations where composing a
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resource</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html#cats.effect.Resource" class="extype" name="cats.effect.Resource">Resource</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>]]</span>
+        <span class="name">resource</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Resource.html#cats.effect.kernel.Resource" class="extype" name="cats.effect.kernel.Resource">Resource</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>]]</span>
       </span>
       
       <p class="shortcomment cmt">Returns the backend as a resource.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the backend as a resource.  Resource acquire waits
@@ -897,9 +877,9 @@ until the backend is ready to process requests.
       
       
     </li><li name="org.http4s.blaze.client.BlazeClientBuilder#scheduler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="scheduler:cats.effect.Resource[F,org.http4s.blaze.util.TickWheelExecutor]"></a><a id="scheduler:Resource[F,TickWheelExecutor]"></a>
+      <a id="scheduler:cats.effect.kernel.Resource[F,org.http4s.blaze.util.TickWheelExecutor]"></a><a id="scheduler:Resource[F,TickWheelExecutor]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#scheduler:cats.effect.Resource[F,org.http4s.blaze.util.TickWheelExecutor]" title="Permalink">
+      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#scheduler:cats.effect.kernel.Resource[F,org.http4s.blaze.util.TickWheelExecutor]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -908,7 +888,7 @@ until the backend is ready to process requests.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">scheduler</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html#cats.effect.Resource" class="extype" name="cats.effect.Resource">Resource</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>, <span class="extype" name="org.http4s.blaze.util.TickWheelExecutor">TickWheelExecutor</span>]</span>
+        <span class="name">scheduler</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Resource.html#cats.effect.kernel.Resource" class="extype" name="cats.effect.kernel.Resource">Resource</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>, <span class="extype" name="org.http4s.blaze.util.TickWheelExecutor">TickWheelExecutor</span>]</span>
       </span>
       
       
@@ -1004,7 +984,7 @@ until the backend is ready to process requests.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stream</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>]]</span>
+        <span class="name">stream</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.blaze.client.BlazeClientBuilder.F">F</span>]]</span>
       </span>
       
       <p class="shortcomment cmt">Returns the backend as a single-element stream.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the backend as a single-element stream.  The stream
@@ -1076,28 +1056,6 @@ The backend is shut down when the stream is finalized.
       
       
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
       <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
@@ -1141,6 +1099,28 @@ The backend is shut down when the stream is finalized.
     </span>)</span>
               
                 <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.blaze.client.BlazeClientBuilder#withAsynchronousChannelGroup" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -1776,7 +1756,31 @@ The backend is shut down when the stream is finalized.
 
         <div class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="org.http4s.blaze.client.BlazeClientBuilder#withSslContextOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li><li name="org.http4s.blaze.client.BlazeClientBuilder#withSslContextOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withSslContextOption(sslContext:Option[javax.net.ssl.SSLContext]):org.http4s.blaze.client.BlazeClientBuilder[F]"></a><a id="withSslContextOption(Option[SSLContext]):BlazeClientBuilder[F]"></a>
       <span class="permalink">
       <a href="../../../../org/http4s/blaze/client/BlazeClientBuilder.html#withSslContextOption(sslContext:Option[javax.net.ssl.SSLContext]):org.http4s.blaze.client.BlazeClientBuilder[F]" title="Permalink">

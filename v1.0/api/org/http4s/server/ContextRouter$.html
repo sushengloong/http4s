@@ -189,10 +189,6 @@ for serious static content serving.
                         <a href="IdleTimeoutSupport$.html" title="">IdleTimeoutSupport</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="package$$Middleware$.html" title=""></a>
-                        <a href="package$$Middleware$.html" title="">Middleware</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
                         <a class="object" href="Router$.html" title=""></a>
                         <a href="Router$.html" title="">Router</a>
                       </li><li class="current-entities indented3">
@@ -251,7 +247,7 @@ for serious static content serving.
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/server/src/main/scala/org/http4s/server/ContextRouter.scala" target="_blank">ContextRouter.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/server/src/main/scala/org/http4s/server/ContextRouter.scala" target="_blank">ContextRouter.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -368,7 +364,7 @@ for serious static content serving.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="mappings">mappings: (<span class="extype" name="scala.Predef.String">String</span>, <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.apply.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.apply.F">F</span>])*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="https://typelevel.org/cats-effect/api/cats/effect/Sync.html#cats.effect.Sync" class="extype" name="cats.effect.Sync">Sync</a>[<span class="extype" name="org.http4s.server.ContextRouter.apply.F">F</span>]</span>)</span><span class="result">: <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.apply.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.apply.F">F</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="mappings">mappings: (<span class="extype" name="scala.Predef.String">String</span>, <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.apply.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.apply.F">F</span>])*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.effect.Sync">Sync</span>[<span class="extype" name="org.http4s.server.ContextRouter.apply.F">F</span>]</span>)</span><span class="result">: <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.apply.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.apply.F">F</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Defines an <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a> based on list of mappings.</p><div class="fullcomment"><div class="comment cmt"><p>Defines an <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a> based on list of mappings.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>define</p></span></dd></dl></div>
@@ -411,6 +407,8 @@ for serious static content serving.
               
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="org.http4s.server.ContextRouter#define" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="define[F[_],A](mappings:(String,org.http4s.ContextRoutes[A,F])*)(default:org.http4s.ContextRoutes[A,F])(implicitevidence$2:cats.effect.Sync[F]):org.http4s.ContextRoutes[A,F]"></a><a id="define[F[_],A]((String,ContextRoutes[A,F])*)(ContextRoutes[A,F])(Sync[F]):ContextRoutes[A,F]"></a>
@@ -424,7 +422,7 @@ for serious static content serving.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">define</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="mappings">mappings: (<span class="extype" name="scala.Predef.String">String</span>, <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.define.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.define.F">F</span>])*</span>)</span><span class="params">(<span name="default">default: <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.define.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.define.F">F</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="https://typelevel.org/cats-effect/api/cats/effect/Sync.html#cats.effect.Sync" class="extype" name="cats.effect.Sync">Sync</a>[<span class="extype" name="org.http4s.server.ContextRouter.define.F">F</span>]</span>)</span><span class="result">: <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.define.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.define.F">F</span>]</span>
+        <span class="name">define</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="mappings">mappings: (<span class="extype" name="scala.Predef.String">String</span>, <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.define.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.define.F">F</span>])*</span>)</span><span class="params">(<span name="default">default: <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.define.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.define.F">F</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.effect.Sync">Sync</span>[<span class="extype" name="org.http4s.server.ContextRouter.define.F">F</span>]</span>)</span><span class="result">: <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a>[<span class="extype" name="org.http4s.server.ContextRouter.define.A">A</span>, <span class="extype" name="org.http4s.server.ContextRouter.define.F">F</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Defines an <a href="../index.html#ContextRoutes[T,F[_]]=cats.data.Kleisli[[β$2$]cats.data.OptionT[F,β$2$],org.http4s.ContextRequest[F,T],org.http4s.Response[F]]" class="extmbr" name="org.http4s.ContextRoutes">ContextRoutes</a> based on list of mappings and
@@ -463,28 +461,6 @@ a default Service to be used when none in the list match incoming requests.</p><
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../org/http4s/server/ContextRouter$.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -502,6 +478,8 @@ a default Service to be used when none in the list match incoming requests.</p><
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -521,6 +499,8 @@ a default Service to be used when none in the list match incoming requests.</p><
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -573,6 +553,8 @@ a default Service to be used when none in the list match incoming requests.</p><
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -591,6 +573,8 @@ a default Service to be used when none in the list match incoming requests.</p><
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -625,28 +609,6 @@ a default Service to be used when none in the list match incoming requests.</p><
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../org/http4s/server/ContextRouter$.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
@@ -693,13 +655,62 @@ a default Service to be used when none in the list match incoming requests.</p><
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/http4s/server/ContextRouter$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li>
               </ol>
             </div>
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/http4s/server/ContextRouter$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

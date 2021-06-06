@@ -189,10 +189,6 @@ for serious static content serving.
                         <a href="IdleTimeoutSupport$.html" title="">IdleTimeoutSupport</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="package$$Middleware$.html" title=""></a>
-                        <a href="package$$Middleware$.html" title="">Middleware</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
                         <a class="object" href="Router$.html" title=""></a>
                         <a href="Router$.html" title="">Router</a>
                       </li><li class="current-entities indented3">
@@ -253,7 +249,7 @@ for serious static content serving.
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/server/src/main/scala/org/http4s/server/ServerBuilder.scala" target="_blank">ServerBuilder.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/server/src/main/scala/org/http4s/server/ServerBuilder.scala" target="_blank">ServerBuilder.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -343,7 +339,7 @@ for serious static content serving.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">F</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/Concurrent.html#cats.effect.Concurrent" class="extype" name="cats.effect.Concurrent">Concurrent</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>]</span>
+        <span class="name">F</span><span class="result">: <span class="extype" name="cats.effect.Concurrent">Concurrent</span>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="org.http4s.server.ServerBuilder">ServerBuilder</a> → BackendBuilder</dd></dl></div>
@@ -375,7 +371,7 @@ for serious static content serving.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resource</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html#cats.effect.Resource" class="extype" name="cats.effect.Resource">Resource</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="Server.html" class="extype" name="org.http4s.server.Server">Server</a>]</span>
+        <span class="name">resource</span><span class="result">: <span class="extype" name="cats.effect.Resource">Resource</span>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="Server.html" class="extype" name="org.http4s.server.Server">Server</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns a Server resource.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Server resource.  The resource is not acquired until the
@@ -492,7 +488,7 @@ to process requests.  The second element of the tuple shuts
 down the backend when run.</p><p>Unlike <a href="#resource:cats.effect.Resource[F,org.http4s.server.Server]" class="extmbr" name="org.http4s.server.ServerBuilder#resource">resource</a> and <a href="#stream:fs2.Stream[F,A]" class="extmbr" name="org.http4s.server.ServerBuilder#stream">stream</a>, there is no automatic
 release of the backend.  This function is intended for REPL
 sessions, tests, and other situations where composing a
-<a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html" class="extype" name="cats.effect.Resource">cats.effect.Resource</a> or <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/Stream.html" class="extype" name="fs2.Stream">fs2.Stream</a> is not tenable.
+<a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/index.html#Resource[F[_],+A]=cats.effect.kernel.Resource[F,A]" class="extype" name="cats.effect">cats.effect.Resource</a> or <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/Stream.html" class="extype" name="fs2.Stream">fs2.Stream</a> is not tenable.
 <a href="#resource:cats.effect.Resource[F,org.http4s.server.Server]" class="extmbr" name="org.http4s.server.ServerBuilder#resource">resource</a> or <a href="#stream:fs2.Stream[F,A]" class="extmbr" name="org.http4s.server.ServerBuilder#stream">stream</a> is recommended wherever possible.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendBuilder</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -582,6 +578,8 @@ sessions, tests, and other situations where composing a
               
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
@@ -615,28 +613,6 @@ sessions, tests, and other situations where composing a
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../org/http4s/server/ServerBuilder.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -654,6 +630,8 @@ sessions, tests, and other situations where composing a
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -673,6 +651,8 @@ sessions, tests, and other situations where composing a
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -725,6 +705,8 @@ sessions, tests, and other situations where composing a
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -744,6 +726,8 @@ sessions, tests, and other situations where composing a
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="org.http4s.server.ServerBuilder#serve" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="serve:fs2.Stream[F,cats.effect.ExitCode]"></a><a id="serve:Stream[F,ExitCode]"></a>
@@ -757,16 +741,16 @@ sessions, tests, and other situations where composing a
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">serve</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="https://typelevel.org/cats-effect/api/cats/effect/ExitCode.html#cats.effect.ExitCode" class="extype" name="cats.effect.ExitCode">ExitCode</a>]</span>
+        <span class="name">serve</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/ExitCode.html#cats.effect.ExitCode" class="extype" name="cats.effect.ExitCode">ExitCode</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Runs the server as a process that never emits.</p><div class="fullcomment"><div class="comment cmt"><p>Runs the server as a process that never emits.  Useful for a server
 that runs for the rest of the JVM's life.
 </p></div></div>
     </li><li name="org.http4s.server.ServerBuilder#serveWhile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="serveWhile(terminateWhenTrue:fs2.concurrent.Signal[F,Boolean],exitWith:cats.effect.concurrent.Ref[F,cats.effect.ExitCode]):fs2.Stream[F,cats.effect.ExitCode]"></a><a id="serveWhile(Signal[F,Boolean],Ref[F,ExitCode]):Stream[F,ExitCode]"></a>
+      <a id="serveWhile(terminateWhenTrue:fs2.concurrent.Signal[F,Boolean],exitWith:cats.effect.Ref[F,cats.effect.ExitCode]):fs2.Stream[F,cats.effect.ExitCode]"></a><a id="serveWhile(Signal[F,Boolean],Ref[F,ExitCode]):Stream[F,ExitCode]"></a>
       <span class="permalink">
-      <a href="../../../org/http4s/server/ServerBuilder.html#serveWhile(terminateWhenTrue:fs2.concurrent.Signal[F,Boolean],exitWith:cats.effect.concurrent.Ref[F,cats.effect.ExitCode]):fs2.Stream[F,cats.effect.ExitCode]" title="Permalink">
+      <a href="../../../org/http4s/server/ServerBuilder.html#serveWhile(terminateWhenTrue:fs2.concurrent.Signal[F,Boolean],exitWith:cats.effect.Ref[F,cats.effect.ExitCode]):fs2.Stream[F,cats.effect.ExitCode]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -775,7 +759,7 @@ that runs for the rest of the JVM's life.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">serveWhile</span><span class="params">(<span name="terminateWhenTrue">terminateWhenTrue: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/concurrent/Signal.html#fs2.concurrent.Signal" class="extype" name="fs2.concurrent.Signal">Signal</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a>]</span>, <span name="exitWith">exitWith: <a href="https://typelevel.org/cats-effect/api/cats/effect/concurrent/Ref.html#cats.effect.concurrent.Ref" class="extype" name="cats.effect.concurrent.Ref">Ref</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="https://typelevel.org/cats-effect/api/cats/effect/ExitCode.html#cats.effect.ExitCode" class="extype" name="cats.effect.ExitCode">ExitCode</a>]</span>)</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="https://typelevel.org/cats-effect/api/cats/effect/ExitCode.html#cats.effect.ExitCode" class="extype" name="cats.effect.ExitCode">ExitCode</a>]</span>
+        <span class="name">serveWhile</span><span class="params">(<span name="terminateWhenTrue">terminateWhenTrue: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/concurrent/Signal.html#fs2.concurrent.Signal" class="extype" name="fs2.concurrent.Signal">Signal</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a>]</span>, <span name="exitWith">exitWith: <span class="extype" name="cats.effect.Ref">Ref</span>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/ExitCode.html#cats.effect.ExitCode" class="extype" name="cats.effect.ExitCode">ExitCode</a>]</span>)</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/ExitCode.html#cats.effect.ExitCode" class="extype" name="cats.effect.ExitCode">ExitCode</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Runs the server as a Stream that emits only when the terminated signal becomes true.</p><div class="fullcomment"><div class="comment cmt"><p>Runs the server as a Stream that emits only when the terminated signal becomes true.
@@ -793,7 +777,7 @@ Useful for servers with associated lifetime behaviors.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stream</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="Server.html" class="extype" name="org.http4s.server.Server">Server</a>]</span>
+        <span class="name">stream</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.server.ServerBuilder.F">F</span>, <a href="Server.html" class="extype" name="org.http4s.server.Server">Server</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns the backend as a single-element stream.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the backend as a single-element stream.  The stream
@@ -832,28 +816,6 @@ The backend is shut down when the stream is finalized.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../org/http4s/server/ServerBuilder.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
@@ -900,6 +862,28 @@ The backend is shut down when the stream is finalized.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/http4s/server/ServerBuilder.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li><li name="org.http4s.server.ServerBuilder#withoutBanner" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="withoutBanner:ServerBuilder.this.Self"></a><a id="withoutBanner:Self"></a>
       <span class="permalink">
@@ -922,7 +906,34 @@ The backend is shut down when the stream is finalized.
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/http4s/server/ServerBuilder.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

@@ -275,10 +275,6 @@
                         <a href="TranslateUri$.html" title="Removes the given prefix from the beginning of the path of the Request.">TranslateUri</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="object" href="URITranslation$.html" title=""></a>
-                        <a href="URITranslation$.html" title="">URITranslation</a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
                         <a class="object" href="UrlFormLifter$.html" title="Middleware for lifting application/x-www-form-urlencoded bodies into the request query params."></a>
                         <a href="UrlFormLifter$.html" title="Middleware for lifting application/x-www-form-urlencoded bodies into the request query params.">UrlFormLifter</a>
                       </li><li class="current-entities indented4">
@@ -313,7 +309,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/server/src/main/scala/org/http4s/server/middleware/HttpMethodOverrider.scala" target="_blank">HttpMethodOverrider.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/server/src/main/scala/org/http4s/server/middleware/HttpMethodOverrider.scala" target="_blank">HttpMethodOverrider.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -502,9 +498,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.http4s.server.middleware.HttpMethodOverrider#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[F[_],G[_]](http:org.http4s.Http[F,G],config:org.http4s.server.middleware.HttpMethodOverrider.HttpMethodOverriderConfig[F,G])(implicitF:cats.Monad[F],implicitS:cats.effect.Sync[G]):org.http4s.Http[F,G]"></a><a id="apply[F[_],G[_]](Http[F,G],HttpMethodOverriderConfig[F,G])(Monad[F],Sync[G]):Http[F,G]"></a>
+      <a id="apply[F[_],G[_]](http:org.http4s.Http[F,G],config:org.http4s.server.middleware.HttpMethodOverrider.HttpMethodOverriderConfig[F,G])(implicitF:cats.Monad[F],implicitS:cats.effect.Concurrent[G]):org.http4s.Http[F,G]"></a><a id="apply[F[_],G[_]](Http[F,G],HttpMethodOverriderConfig[F,G])(Monad[F],Concurrent[G]):Http[F,G]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/server/middleware/HttpMethodOverrider$.html#apply[F[_],G[_]](http:org.http4s.Http[F,G],config:org.http4s.server.middleware.HttpMethodOverrider.HttpMethodOverriderConfig[F,G])(implicitF:cats.Monad[F],implicitS:cats.effect.Sync[G]):org.http4s.Http[F,G]" title="Permalink">
+      <a href="../../../../org/http4s/server/middleware/HttpMethodOverrider$.html#apply[F[_],G[_]](http:org.http4s.Http[F,G],config:org.http4s.server.middleware.HttpMethodOverrider.HttpMethodOverriderConfig[F,G])(implicitF:cats.Monad[F],implicitS:cats.effect.Concurrent[G]):org.http4s.Http[F,G]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -513,7 +509,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="G">G<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="http">http: <a href="../../index.html#Http[F[_],G[_]]=cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]]" class="extmbr" name="org.http4s.Http">Http</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.F">F</span>, <span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.G">G</span>]</span>, <span name="config">config: <a href="HttpMethodOverrider$$HttpMethodOverriderConfig.html" class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.HttpMethodOverriderConfig">HttpMethodOverriderConfig</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.F">F</span>, <span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.G">G</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="http://typelevel.org/cats/api/cats/Monad.html#cats.Monad" class="extype" name="cats.Monad">Monad</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.F">F</span>]</span>, <span name="S">S: <a href="https://typelevel.org/cats-effect/api/cats/effect/Sync.html#cats.effect.Sync" class="extype" name="cats.effect.Sync">Sync</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.G">G</span>]</span>)</span><span class="result">: <a href="../../index.html#Http[F[_],G[_]]=cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]]" class="extmbr" name="org.http4s.Http">Http</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.F">F</span>, <span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.G">G</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="G">G<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="http">http: <a href="../../index.html#Http[F[_],G[_]]=cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]]" class="extmbr" name="org.http4s.Http">Http</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.F">F</span>, <span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.G">G</span>]</span>, <span name="config">config: <a href="HttpMethodOverrider$$HttpMethodOverriderConfig.html" class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.HttpMethodOverriderConfig">HttpMethodOverriderConfig</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.F">F</span>, <span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.G">G</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="http://typelevel.org/cats/api/cats/Monad.html#cats.Monad" class="extype" name="cats.Monad">Monad</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.F">F</span>]</span>, <span name="S">S: <span class="extype" name="cats.effect.Concurrent">Concurrent</span>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.G">G</span>]</span>)</span><span class="result">: <a href="../../index.html#Http[F[_],G[_]]=cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]]" class="extmbr" name="org.http4s.Http">Http</a>[<span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.F">F</span>, <span class="extype" name="org.http4s.server.middleware.HttpMethodOverrider.apply.G">G</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Simple middleware for HTTP Method Override.</p><div class="fullcomment"><div class="comment cmt"><p>Simple middleware for HTTP Method Override.</p><p>This middleware lets you use  HTTP verbs such as PUT or DELETE in places where the client
@@ -559,6 +555,8 @@ the original verb with the new one for you, allowing the request the be dispatch
     </span>)</span>
               
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.server.middleware.HttpMethodOverrider#defaultConfig" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -609,28 +607,6 @@ the original verb with the new one for you, allowing the request the be dispatch
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/server/middleware/HttpMethodOverrider$.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -648,6 +624,8 @@ the original verb with the new one for you, allowing the request the be dispatch
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -667,6 +645,8 @@ the original verb with the new one for you, allowing the request the be dispatch
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -719,6 +699,8 @@ the original verb with the new one for you, allowing the request the be dispatch
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -737,6 +719,8 @@ the original verb with the new one for you, allowing the request the be dispatch
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.server.middleware.HttpMethodOverrider#overriddenMethodAttrKey" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -788,28 +772,6 @@ the original verb with the new one for you, allowing the request the be dispatch
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/server/middleware/HttpMethodOverrider$.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
       <a href="../../../../org/http4s/server/middleware/HttpMethodOverrider$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
@@ -855,6 +817,28 @@ the original verb with the new one for you, allowing the request the be dispatch
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/server/middleware/HttpMethodOverrider$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li><li name="org.http4s.server.middleware.HttpMethodOverrider.HttpMethodOverriderConfig" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HttpMethodOverriderConfig"></a><a id="HttpMethodOverriderConfig:HttpMethodOverriderConfig"></a>
       <span class="permalink">
@@ -877,7 +861,34 @@ the original verb with the new one for you, allowing the request the be dispatch
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/server/middleware/HttpMethodOverrider$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

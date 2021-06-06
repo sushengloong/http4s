@@ -203,7 +203,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/servlet/src/main/scala/org/http4s/servlet/BlockingHttp4sServlet.scala" target="_blank">BlockingHttp4sServlet.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/servlet/src/main/scala/org/http4s/servlet/BlockingHttp4sServlet.scala" target="_blank">BlockingHttp4sServlet.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -254,9 +254,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.http4s.servlet.BlockingHttp4sServlet#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(service:org.http4s.HttpApp[F],servletIo:org.http4s.servlet.BlockingServletIo[F],serviceErrorHandler:org.http4s.server.ServiceErrorHandler[F])(implicitF:cats.effect.Effect[F]):org.http4s.servlet.BlockingHttp4sServlet[F]"></a><a id="&lt;init&gt;:BlockingHttp4sServlet[F]"></a>
+      <a id="&lt;init&gt;(service:org.http4s.HttpApp[F],servletIo:org.http4s.servlet.ServletIo[F],serviceErrorHandler:org.http4s.server.ServiceErrorHandler[F],dispatcher:cats.effect.std.Dispatcher[F])(implicitF:cats.effect.kernel.Async[F]):org.http4s.servlet.BlockingHttp4sServlet[F]"></a><a id="&lt;init&gt;:BlockingHttp4sServlet[F]"></a>
       <span class="permalink">
-      <a href="../../../org/http4s/servlet/BlockingHttp4sServlet.html#&lt;init&gt;(service:org.http4s.HttpApp[F],servletIo:org.http4s.servlet.BlockingServletIo[F],serviceErrorHandler:org.http4s.server.ServiceErrorHandler[F])(implicitF:cats.effect.Effect[F]):org.http4s.servlet.BlockingHttp4sServlet[F]" title="Permalink">
+      <a href="../../../org/http4s/servlet/BlockingHttp4sServlet.html#&lt;init&gt;(service:org.http4s.HttpApp[F],servletIo:org.http4s.servlet.ServletIo[F],serviceErrorHandler:org.http4s.server.ServiceErrorHandler[F],dispatcher:cats.effect.std.Dispatcher[F])(implicitF:cats.effect.kernel.Async[F]):org.http4s.servlet.BlockingHttp4sServlet[F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -265,7 +265,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BlockingHttp4sServlet</span><span class="params">(<span name="service">service: <a href="../index.html#HttpApp[F[_]]=org.http4s.package.Http[F,F]" class="extmbr" name="org.http4s.HttpApp">HttpApp</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>, <span name="servletIo">servletIo: <a href="BlockingServletIo.html" class="extype" name="org.http4s.servlet.BlockingServletIo">BlockingServletIo</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>, <span name="serviceErrorHandler">serviceErrorHandler: <a href="../server/index.html#ServiceErrorHandler[F[_]]=org.http4s.Request[F]=&gt;PartialFunction[Throwable,F[org.http4s.Response[F]]]" class="extmbr" name="org.http4s.server.ServiceErrorHandler">ServiceErrorHandler</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/Effect.html#cats.effect.Effect" class="extype" name="cats.effect.Effect">Effect</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>)</span>
+        <span class="name">BlockingHttp4sServlet</span><span class="params">(<span name="service">service: <a href="../index.html#HttpApp[F[_]]=org.http4s.package.Http[F,F]" class="extmbr" name="org.http4s.HttpApp">HttpApp</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>, <span name="servletIo">servletIo: <a href="ServletIo.html" class="extype" name="org.http4s.servlet.ServletIo">ServletIo</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>, <span name="serviceErrorHandler">serviceErrorHandler: <a href="../server/index.html#ServiceErrorHandler[F[_]]=org.http4s.Request[F]=&gt;PartialFunction[Throwable,F[org.http4s.Response[F]]]" class="extmbr" name="org.http4s.server.ServiceErrorHandler">ServiceErrorHandler</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>, <span name="dispatcher">dispatcher: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/std/Dispatcher.html#cats.effect.std.Dispatcher" class="extype" name="cats.effect.std.Dispatcher">Dispatcher</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Async.html#cats.effect.kernel.Async" class="extype" name="cats.effect.kernel.Async">Async</a>[<span class="extype" name="org.http4s.servlet.BlockingHttp4sServlet.F">F</span>]</span>)</span>
       </span>
       
       
@@ -365,6 +365,8 @@
     </span>)</span>
               
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="javax.servlet.GenericServlet#destroy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -604,28 +606,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../org/http4s/servlet/BlockingHttp4sServlet.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -643,6 +623,8 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="javax.servlet.GenericServlet#getInitParameter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -774,6 +756,8 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.servlet.Http4sServlet#init" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -912,6 +896,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -930,6 +916,8 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.servlet.Http4sServlet#onParseFailure" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -1104,28 +1092,6 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../org/http4s/servlet/BlockingHttp4sServlet.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
       <a href="../../../org/http4s/servlet/BlockingHttp4sServlet.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
@@ -1171,6 +1137,28 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/http4s/servlet/BlockingHttp4sServlet.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li><li name="org.http4s.servlet.Http4sServlet.ServletRequestKeys" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ServletRequestKeys"></a><a id="ServletRequestKeys:ServletRequestKeys"></a>
       <span class="permalink">
@@ -1193,7 +1181,34 @@
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/http4s/servlet/BlockingHttp4sServlet.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

@@ -169,7 +169,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/async-http-client/src/main/scala/org/http4s/asynchttpclient/AsyncHttpClient.scala" target="_blank">AsyncHttpClient.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/async-http-client/src/main/scala/org/http4s/asynchttpclient/AsyncHttpClient.scala" target="_blank">AsyncHttpClient.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -275,9 +275,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.http4s.asynchttpclient.client.AsyncHttpClient#allocate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="allocate[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.ConcurrentEffect[F]):F[(org.http4s.client.Client[F],F[Unit])]"></a><a id="allocate[F[_]](AsyncHttpClientConfig)(ConcurrentEffect[F]):F[(Client[F],F[Unit])]"></a>
+      <a id="allocate[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.kernel.Async[F]):F[(org.http4s.client.Client[F],F[Unit])]"></a><a id="allocate[F[_]](AsyncHttpClientConfig)(Async[F]):F[(Client[F],F[Unit])]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#allocate[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.ConcurrentEffect[F]):F[(org.http4s.client.Client[F],F[Unit])]" title="Permalink">
+      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#allocate[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.kernel.Async[F]):F[(org.http4s.client.Client[F],F[Unit])]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -286,26 +286,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">allocate</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="config">config: <span class="extype" name="org.asynchttpclient.AsyncHttpClientConfig">AsyncHttpClientConfig</span> = <span class="symbol"><span class="name"><a href="#defaultConfig:org.asynchttpclient.DefaultAsyncHttpClientConfig">defaultConfig</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/ConcurrentEffect.html#cats.effect.ConcurrentEffect" class="extype" name="cats.effect.ConcurrentEffect">ConcurrentEffect</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.allocate.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.allocate.F">F</span>[(<a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.allocate.F">F</span>], <span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.allocate.F">F</span>[<a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>])]</span>
+        <span class="name">allocate</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="config">config: <span class="extype" name="org.asynchttpclient.AsyncHttpClientConfig">AsyncHttpClientConfig</span> = <span class="symbol"><span class="name"><a href="#defaultConfig:org.asynchttpclient.DefaultAsyncHttpClientConfig">defaultConfig</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Async.html#cats.effect.kernel.Async" class="extype" name="cats.effect.kernel.Async">Async</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.allocate.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.allocate.F">F</span>[(<a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.allocate.F">F</span>], <span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.allocate.F">F</span>[<a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>])]</span>
       </span>
       
       <p class="shortcomment cmt">Allocates a Client and its shutdown mechanism for freeing resources.</p>
-    </li><li name="org.http4s.asynchttpclient.client.AsyncHttpClient#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[F[_]](httpClient:org.asynchttpclient.AsyncHttpClient)(implicitF:cats.effect.ConcurrentEffect[F]):org.http4s.client.Client[F]"></a><a id="apply[F[_]](AsyncHttpClient)(ConcurrentEffect[F]):Client[F]"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#apply[F[_]](httpClient:org.asynchttpclient.AsyncHttpClient)(implicitF:cats.effect.ConcurrentEffect[F]):org.http4s.client.Client[F]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="httpClient">httpClient: <span class="extype" name="org.asynchttpclient.AsyncHttpClient">AsyncHttpClient</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/ConcurrentEffect.html#cats.effect.ConcurrentEffect" class="extype" name="cats.effect.ConcurrentEffect">ConcurrentEffect</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.apply.F">F</span>]</span>)</span><span class="result">: <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.apply.F">F</span>]</span>
-      </span>
-      
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -344,6 +328,8 @@
     </span>)</span>
               
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="org.http4s.asynchttpclient.client.AsyncHttpClient#configure" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -412,10 +398,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
+    </li><li name="org.http4s.asynchttpclient.client.AsyncHttpClient#fromClient" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromClient[F[_]](httpClient:org.asynchttpclient.AsyncHttpClient)(implicitF:cats.effect.kernel.Async[F]):cats.effect.kernel.Resource[F,org.http4s.client.Client[F]]"></a><a id="fromClient[F[_]](AsyncHttpClient)(Async[F]):Resource[F,Client[F]]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#finalize():Unit" title="Permalink">
+      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#fromClient[F[_]](httpClient:org.asynchttpclient.AsyncHttpClient)(implicitF:cats.effect.kernel.Async[F]):cats.effect.kernel.Resource[F,org.http4s.client.Client[F]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -424,16 +410,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">fromClient</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="httpClient">httpClient: <span class="extype" name="org.asynchttpclient.AsyncHttpClient">AsyncHttpClient</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Async.html#cats.effect.kernel.Async" class="extype" name="cats.effect.kernel.Async">Async</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.fromClient.F">F</span>]</span>)</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Resource.html#cats.effect.kernel.Resource" class="extype" name="cats.effect.kernel.Resource">Resource</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.fromClient.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.fromClient.F">F</span>]]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
+      <p class="shortcomment cmt">Create a HTTP client with an existing AsyncHttpClient client.</p><div class="fullcomment"><div class="comment cmt"><p>Create a HTTP client with an existing AsyncHttpClient client. The supplied client is NOT
+closed by this Resource!
+</p></div></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -451,6 +433,8 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -470,6 +454,8 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -522,6 +508,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -541,11 +529,13 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="org.http4s.asynchttpclient.client.AsyncHttpClient#resource" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resource[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.ConcurrentEffect[F]):cats.effect.Resource[F,org.http4s.client.Client[F]]"></a><a id="resource[F[_]](AsyncHttpClientConfig)(ConcurrentEffect[F]):Resource[F,Client[F]]"></a>
+      <a id="resource[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.kernel.Async[F]):cats.effect.kernel.Resource[F,org.http4s.client.Client[F]]"></a><a id="resource[F[_]](AsyncHttpClientConfig)(Async[F]):Resource[F,Client[F]]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#resource[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.ConcurrentEffect[F]):cats.effect.Resource[F,org.http4s.client.Client[F]]" title="Permalink">
+      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#resource[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.kernel.Async[F]):cats.effect.kernel.Resource[F,org.http4s.client.Client[F]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -554,16 +544,16 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resource</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="config">config: <span class="extype" name="org.asynchttpclient.AsyncHttpClientConfig">AsyncHttpClientConfig</span> = <span class="symbol"><span class="name"><a href="#defaultConfig:org.asynchttpclient.DefaultAsyncHttpClientConfig">defaultConfig</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/ConcurrentEffect.html#cats.effect.ConcurrentEffect" class="extype" name="cats.effect.ConcurrentEffect">ConcurrentEffect</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.resource.F">F</span>]</span>)</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/cats/effect/Resource.html#cats.effect.Resource" class="extype" name="cats.effect.Resource">Resource</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.resource.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.resource.F">F</span>]]</span>
+        <span class="name">resource</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="config">config: <span class="extype" name="org.asynchttpclient.AsyncHttpClientConfig">AsyncHttpClientConfig</span> = <span class="symbol"><span class="name"><a href="#defaultConfig:org.asynchttpclient.DefaultAsyncHttpClientConfig">defaultConfig</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Async.html#cats.effect.kernel.Async" class="extype" name="cats.effect.kernel.Async">Async</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.resource.F">F</span>]</span>)</span><span class="result">: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Resource.html#cats.effect.kernel.Resource" class="extype" name="cats.effect.kernel.Resource">Resource</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.resource.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.resource.F">F</span>]]</span>
       </span>
       
       <p class="shortcomment cmt">Create an HTTP client based on the AsyncHttpClient library
 </p><div class="fullcomment"><div class="comment cmt"><p>Create an HTTP client based on the AsyncHttpClient library
 </p></div><dl class="paramcmts block"><dt class="param">config</dt><dd class="cmt"><p>configuration for the client</p></dd></dl></div>
     </li><li name="org.http4s.asynchttpclient.client.AsyncHttpClient#stream" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="stream[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.ConcurrentEffect[F]):fs2.Stream[F,org.http4s.client.Client[F]]"></a><a id="stream[F[_]](AsyncHttpClientConfig)(ConcurrentEffect[F]):Stream[F,Client[F]]"></a>
+      <a id="stream[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.kernel.Async[F]):fs2.Stream[F,org.http4s.client.Client[F]]"></a><a id="stream[F[_]](AsyncHttpClientConfig)(Async[F]):Stream[F,Client[F]]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#stream[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.ConcurrentEffect[F]):fs2.Stream[F,org.http4s.client.Client[F]]" title="Permalink">
+      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#stream[F[_]](config:org.asynchttpclient.AsyncHttpClientConfig)(implicitF:cats.effect.kernel.Async[F]):fs2.Stream[F,org.http4s.client.Client[F]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -572,7 +562,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stream</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="config">config: <span class="extype" name="org.asynchttpclient.AsyncHttpClientConfig">AsyncHttpClientConfig</span> = <span class="symbol"><span class="name"><a href="#defaultConfig:org.asynchttpclient.DefaultAsyncHttpClientConfig">defaultConfig</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/cats/effect/ConcurrentEffect.html#cats.effect.ConcurrentEffect" class="extype" name="cats.effect.ConcurrentEffect">ConcurrentEffect</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.stream.F">F</span>]</span>)</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/2.5.6/fs2-core_2.12-2.5.6-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.stream.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.stream.F">F</span>]]</span>
+        <span class="name">stream</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="config">config: <span class="extype" name="org.asynchttpclient.AsyncHttpClientConfig">AsyncHttpClientConfig</span> = <span class="symbol"><span class="name"><a href="#defaultConfig:org.asynchttpclient.DefaultAsyncHttpClientConfig">defaultConfig</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="F">F: <a href="https://typelevel.org/cats-effect/api/3.x/cats/effect/kernel/Async.html#cats.effect.kernel.Async" class="extype" name="cats.effect.kernel.Async">Async</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.stream.F">F</span>]</span>)</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/co/fs2/fs2-core_2.12/3.0.4/fs2-core_2.12-3.0.4-javadoc.jar/!/fs2/Stream.html#fs2.Stream" class="extype" name="fs2.Stream">Stream</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.stream.F">F</span>, <a href="../../client/Client.html" class="extype" name="org.http4s.client.Client">Client</a>[<span class="extype" name="org.http4s.asynchttpclient.client.AsyncHttpClient.stream.F">F</span>]]</span>
       </span>
       
       <p class="shortcomment cmt">Create a bracketed HTTP client based on the AsyncHttpClient library.</p><div class="fullcomment"><div class="comment cmt"><p>Create a bracketed HTTP client based on the AsyncHttpClient library.
@@ -610,28 +600,6 @@ shutdown when the stream terminates.</p></dd></dl></div>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
@@ -678,13 +646,62 @@ shutdown when the stream terminates.</p></dd></dl></div>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li>
               </ol>
             </div>
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/asynchttpclient/client/AsyncHttpClient$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

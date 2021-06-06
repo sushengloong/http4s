@@ -275,10 +275,6 @@
                         <a href="TranslateUri$.html" title="Removes the given prefix from the beginning of the path of the Request.">TranslateUri</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="object" href="URITranslation$.html" title=""></a>
-                        <a href="URITranslation$.html" title="">URITranslation</a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
                         <a class="object" href="" title="Middleware for lifting application/x-www-form-urlencoded bodies into the request query params."></a>
                         <a href="" title="Middleware for lifting application/x-www-form-urlencoded bodies into the request query params.">UrlFormLifter</a>
                       </li><li class="current-entities indented4">
@@ -317,7 +313,7 @@
 request query params.</p><p>The params are merged into the existing paras _after_ the existing query params. This
 means that if the query already contains the pair &quot;foo&quot; -&gt; Some(&quot;bar&quot;), parameters on
 the body must be acessed through <code>multiParams</code>.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/v1.0.0-M23/server/src/main/scala/org/http4s/server/middleware/UrlFormLifter.scala" target="_blank">UrlFormLifter.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/http4s/http4s/blob/d6215fb401f66a59893a14e81c8d81dd5447a06f/server/src/main/scala/org/http4s/server/middleware/UrlFormLifter.scala" target="_blank">UrlFormLifter.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -423,9 +419,9 @@ the body must be acessed through <code>multiParams</code>.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.http4s.server.middleware.UrlFormLifter#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[F[_],G[_]](f:G~&gt;F)(http:cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]],strictDecode:Boolean)(implicitevidence$1:cats.effect.Sync[F],implicitevidence$2:cats.effect.Sync[G]):cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]]"></a><a id="apply[F[_],G[_]](~&gt;[G,F])(Kleisli[F,Request[G],Response[G]],Boolean)(Sync[F],Sync[G]):Kleisli[F,Request[G],Response[G]]"></a>
+      <a id="apply[F[_],G[_]](f:G~&gt;F)(http:cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]],strictDecode:Boolean)(implicitevidence$1:cats.effect.Sync[F],implicitevidence$2:cats.effect.Concurrent[G]):cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]]"></a><a id="apply[F[_],G[_]](~&gt;[G,F])(Kleisli[F,Request[G],Response[G]],Boolean)(Sync[F],Concurrent[G]):Kleisli[F,Request[G],Response[G]]"></a>
       <span class="permalink">
-      <a href="../../../../org/http4s/server/middleware/UrlFormLifter$.html#apply[F[_],G[_]](f:G~&gt;F)(http:cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]],strictDecode:Boolean)(implicitevidence$1:cats.effect.Sync[F],implicitevidence$2:cats.effect.Sync[G]):cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]]" title="Permalink">
+      <a href="../../../../org/http4s/server/middleware/UrlFormLifter$.html#apply[F[_],G[_]](f:G~&gt;F)(http:cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]],strictDecode:Boolean)(implicitevidence$1:cats.effect.Sync[F],implicitevidence$2:cats.effect.Concurrent[G]):cats.data.Kleisli[F,org.http4s.Request[G],org.http4s.Response[G]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -434,7 +430,7 @@ the body must be acessed through <code>multiParams</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="G">G<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="f">f: <span class="extype" name="cats.~&gt;">~&gt;</span>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>, <span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.F">F</span>]</span>)</span><span class="params">(<span name="http">http: <a href="http://typelevel.org/cats/api/cats/data/Kleisli.html#cats.data.Kleisli" class="extype" name="cats.data.Kleisli">Kleisli</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.F">F</span>, <a href="../../Request.html" class="extype" name="org.http4s.Request">Request</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>], <a href="../../Response.html" class="extype" name="org.http4s.Response">Response</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>]]</span>, <span name="strictDecode">strictDecode: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a> = <span class="symbol">false</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="https://typelevel.org/cats-effect/api/cats/effect/Sync.html#cats.effect.Sync" class="extype" name="cats.effect.Sync">Sync</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.F">F</span>]</span>, <span name="arg1">arg1: <a href="https://typelevel.org/cats-effect/api/cats/effect/Sync.html#cats.effect.Sync" class="extype" name="cats.effect.Sync">Sync</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>]</span>)</span><span class="result">: <a href="http://typelevel.org/cats/api/cats/data/Kleisli.html#cats.data.Kleisli" class="extype" name="cats.data.Kleisli">Kleisli</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.F">F</span>, <a href="../../Request.html" class="extype" name="org.http4s.Request">Request</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>], <a href="../../Response.html" class="extype" name="org.http4s.Response">Response</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>]]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="G">G<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="f">f: <span class="extype" name="cats.~&gt;">~&gt;</span>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>, <span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.F">F</span>]</span>)</span><span class="params">(<span name="http">http: <a href="http://typelevel.org/cats/api/cats/data/Kleisli.html#cats.data.Kleisli" class="extype" name="cats.data.Kleisli">Kleisli</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.F">F</span>, <a href="../../Request.html" class="extype" name="org.http4s.Request">Request</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>], <a href="../../Response.html" class="extype" name="org.http4s.Response">Response</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>]]</span>, <span name="strictDecode">strictDecode: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a> = <span class="symbol">false</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.effect.Sync">Sync</span>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.F">F</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cats.effect.Concurrent">Concurrent</span>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>]</span>)</span><span class="result">: <a href="http://typelevel.org/cats/api/cats/data/Kleisli.html#cats.data.Kleisli" class="extype" name="cats.data.Kleisli">Kleisli</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.F">F</span>, <a href="../../Request.html" class="extype" name="org.http4s.Request">Request</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>], <a href="../../Response.html" class="extype" name="org.http4s.Response">Response</a>[<span class="extype" name="org.http4s.server.middleware.UrlFormLifter.apply.G">G</span>]]</span>
       </span>
       
       
@@ -477,6 +473,8 @@ the body must be acessed through <code>multiParams</code>.
               
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
@@ -510,28 +508,6 @@ the body must be acessed through <code>multiParams</code>.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/server/middleware/UrlFormLifter$.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -549,6 +525,8 @@ the body must be acessed through <code>multiParams</code>.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -568,6 +546,8 @@ the body must be acessed through <code>multiParams</code>.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -620,6 +600,8 @@ the body must be acessed through <code>multiParams</code>.
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -638,6 +620,8 @@ the body must be acessed through <code>multiParams</code>.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -672,28 +656,6 @@ the body must be acessed through <code>multiParams</code>.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/http4s/server/middleware/UrlFormLifter$.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
@@ -740,13 +702,62 @@ the body must be acessed through <code>multiParams</code>.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/server/middleware/UrlFormLifter$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li>
               </ol>
             </div>
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/http4s/server/middleware/UrlFormLifter$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
